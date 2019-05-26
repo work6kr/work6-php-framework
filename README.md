@@ -66,22 +66,22 @@ php를 이용한 웹 서비스를 구축하는 개발자들을 위한 개발 프
 <br>
 
 ## 디렉토리 구조
-##### 코어
+#### 코어
 common, controller 디렉토리가 해당합니다. 이곳의 파일들은 불가피한 경우를 제외하고 수정/삭제를 권하지 않습니다. 코어 영역 디렉토리들을 교체하여 프레임워크 버전을 업데이트를 할 수 있습니다. common는 템플릿, 다운로드, 파일 업로드, 메일과 같이 공통으로 사용될수 있는 클래스들이 있습니다. controller는 직원 관리, 로그인, 로그아웃 등 솔루션 개발에 필요한 기본 페이지를 구성하는 클래스들이 있습니다. controller/admin에는 관리자 페이지들이, controller/front에는 사용자 페이들이 구성되어 있습니다.
 <br>
 <br>
 
-##### 커스텀마이징
+#### 커스텀마이징
 custom 디렉토리가 해당합니다. 코어의 controller 안에 클래스들을 직접 수정하지 않고 커스텀마이징하기 위하여 존재합니다. controller와 같은 디렉토리 구조를 가집니다.
 <br>
 <br>
 
-##### 모델
+#### 모델
 model 디렉토리가 해당합니다. 데이터베이스 select, insert, update 동작 클래스로 구성되어 있습니다.
 <br>
 <br>
 
-##### 데이터
+#### 데이터
 data 디렉토리가 해당합니다. data/skin/admin는 기본으로 제공되는 관리자 페이지의 퍼블리싱 파일 HTML, CSS, JS가 있습니다. data/skin/error는 에러 발생시 퍼블리싱 파일이 있습니다. data/document와 같이 디렉토리를 생성하여 업로드 파일, 공통 이미지 등을 저장할 수 있습니다.
 <br>
 <br>
@@ -108,12 +108,12 @@ namespace model\front
 
 ## URL 구조
 
-##### 관리자
+#### 관리자
 ```
 https://도메인/admin/클래스/메소드/파라미터1/파라미터2/...
 ```
 
-##### 프론트
+#### 프론트
 ```
 https://도메인/클래스/메소드/파라미터1/파라미터2/...
 ```
@@ -127,7 +127,7 @@ https://도메인/클래스/메소드/파라미터1/파라미터2/...
 <br>
 <br>
 
-##### w_config : 설정 테이블
+#### w_config : 설정 테이블
 | 번호 | 컬럼 | 컬럼명 | 타입 | 비고 |
 |:--------:|:--------|:--------|:--------|:--------|
 | 1 | idx | 인덱스 | int(10) | auto_increment, primary key |
@@ -136,7 +136,7 @@ https://도메인/클래스/메소드/파라미터1/파라미터2/...
 
 <br>
 
-##### w_level : 직원등급 테이블
+#### w_level : 직원등급 테이블
 | 번호 | 컬럼 | 컬럼명 | 타입 | 비고 |
 |:--------:|:--------|:--------|:--------|:--------|
 | 1 | idx | 인덱스 | int(10) | auto_increment, primary key |
@@ -149,7 +149,7 @@ https://도메인/클래스/메소드/파라미터1/파라미터2/...
 
 <br>
 
-##### w_member : 직원 테이블
+#### w_member : 직원 테이블
 | 번호 | 컬럼 | 컬럼명 | 타입 | 비고 |
 |:--------:|:--------|:--------|:--------|:--------|
 | 1 | idx | 인덱스 | int(10) | auto_increment, primary key |
@@ -166,7 +166,7 @@ https://도메인/클래스/메소드/파라미터1/파라미터2/...
 
 <br>
 
-##### w_log_login : 접속 로그 테이블
+#### w_log_login : 접속 로그 테이블
 | 번호 | 컬럼 | 컬럼명 | 타입 | 비고 |
 |:--------:|:--------|:--------|:--------|:--------|
 | 1 | idx | 인덱스 | int(10) | auto_increment, primary key |
@@ -176,7 +176,7 @@ https://도메인/클래스/메소드/파라미터1/파라미터2/...
 
 <br>
 
-##### w_notice : 공지 테이블
+#### w_notice : 공지 테이블
 | 번호 | 컬럼 | 컬럼명 | 타입 | 비고 |
 |:--------:|:--------|:--------|:--------|:--------|
 | 1 | idx | 인덱스 | int(10) | auto_increment, primary key |
@@ -208,7 +208,7 @@ $table['virtual_name'] ='real_table_name';
 <br>
 <br>
 
-##### 방법1 : 새로운 클래스 추가
+#### 방법1 : 새로운 클래스 추가
 ```php
 /* custom/sample.php */
 namespace custom\admin;
@@ -225,7 +225,7 @@ class Sample extends common\AdminLibrary{
 ```
 <br>
 
-##### 방법2 : controller 내에 클래스 대체
+#### 방법2 : controller 내에 클래스 대체
 ```php
 /* custom/sample.php */
 namespace custom\admin;
@@ -253,7 +253,7 @@ class Sample extends controller\admin\Sample{
 
 ## 클래스 선언 : 불러오기
 
-##### 방법1 : use 사용
+#### 방법1 : use 사용
 ```php
 use common\Page as Page;
 class YourClass{
@@ -267,7 +267,7 @@ class YourClass{
 ```
 <br>
 
-##### 방법2 : 인라인
+#### 방법2 : 인라인
 ```php
 class YourClass{
 
