@@ -1,0 +1,23 @@
+{#header}
+
+<div id="login" class="bg_white">
+
+    <dl>
+        <dd>
+            <h1>{cfg.site_name} 관리자 로그인</h1>
+            <form method="post" action="/admin/login/chk" target="ifrmh">
+                <input type="text" name="uid" value="{data.uid}" autocomplete="off" placeholder="이메일" required="required">
+                <input type="password" name="upw" placeholder="패스워드" required="required" value="">
+                <label><input type="checkbox" class="checkbox" name="saveid" value="y" {data.checked.saveid}> 아이디저장</label>
+
+                <div class="btn_area">
+                    <input type="submit" class="white bg_black hover_white" value="로그인">
+                </div>
+            </form>
+        </dd>
+    </dl>
+    <span class="block relative size10 center gray"><a href="http://work6.kr" target="_blank">Program created by work6.kr</a></span>
+</div>
+
+
+{#footer}

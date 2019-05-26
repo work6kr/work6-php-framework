@@ -1,0 +1,205 @@
+{#header}
+
+<!-- syntabxheightlinter -->
+<script src="http://work6.kr/skin2018/syntaxhighlight/js/XRegExp.js"></script>
+<script src="http://work6.kr/skin2018/syntaxhighlight/js/shCore.js"></script>
+<script src="http://work6.kr/skin2018/syntaxhighlight/js/shLegacy.js"></script>
+<script src="http://work6.kr/skin2018/syntaxhighlight/js/shBrushBash.js"></script>
+<script src="http://work6.kr/skin2018/syntaxhighlight/js/shBrushCpp.js"></script>
+<script src="http://work6.kr/skin2018/syntaxhighlight/js/shBrushCSharp.js"></script>
+<script src="http://work6.kr/skin2018/syntaxhighlight/js/shBrushCss.js"></script>
+<script src="http://work6.kr/skin2018/syntaxhighlight/js/shBrushDelphi.js"></script>
+<script src="http://work6.kr/skin2018/syntaxhighlight/js/shBrushDiff.js"></script>
+<script src="http://work6.kr/skin2018/syntaxhighlight/js/shBrushGroovy.js"></script>
+<script src="http://work6.kr/skin2018/syntaxhighlight/js/shBrushJava.js"></script>
+<script src="http://work6.kr/skin2018/syntaxhighlight/js/shBrushJScript.js"></script>
+<script src="http://work6.kr/skin2018/syntaxhighlight/js/shBrushPhp.js"></script>
+<script src="http://work6.kr/skin2018/syntaxhighlight/js/shBrushPlain.js"></script>
+<script src="http://work6.kr/skin2018/syntaxhighlight/js/shBrushPython.js"></script>
+<script src="http://work6.kr/skin2018/syntaxhighlight/js/shBrushRuby.js"></script>
+<script src="http://work6.kr/skin2018/syntaxhighlight/js/shBrushScala.js"></script>
+<script src="http://work6.kr/skin2018/syntaxhighlight/js/shBrushSql.js"></script>
+<script src="http://work6.kr/skin2018/syntaxhighlight/js/shBrushVb.js"></script>
+<script src="http://work6.kr/skin2018/syntaxhighlight/js/shBrushXml.js"></script>
+<link type="text/css" rel="stylesheet" href="http://work6.kr/skin2018/syntaxhighlight/css/shCore.css">
+<link type="text/css" rel="stylesheet" href="http://work6.kr/skin2018/syntaxhighlight/css/shThemeRDarkCustom.css">
+<script type="text/javascript">
+SyntaxHighlighter.all();
+</script>
+
+
+<div id="devguide" class="bg_white">
+    <nav><i class="fas fa-code-branch"></i> 도움말 > 개발자 가이드</nav>
+
+
+        <div class="form mb20">
+            <h2><i class="fa fa-cube" aria-hidden="true"></i> 디렉토리 구조</h2>
+            <img src="/data/skin/{cfg.skin}/devguide/dev_structure.jpg" alt="dev_structure">
+            <div class="pt10">
+                코어 영역 : 코어 프로그램 파일들이 위치하고 있으며, <span class="red">이곳의 파일들은 수정/삭제를 권하지 않습니다.</span><br/>
+                커스텀 영역 : 코어 프로그램을 수정하지 않고, <span class="green">기능 및 페이지를 추가/삭제/수정 할수 있습니다.</span><br/>
+                화면 영역 : HTML, CSS, JAVASCRIPT 및 각종 파일들이 위치하고 있습니다.
+            </div>
+        </div>
+
+
+
+        <div class="form mb20">
+            <h2><i class="fa fa-cube" aria-hidden="true"></i> URL 구조</h2>
+            <div>
+                <span class="gray">http://도메인/admin/</span><span class="green">클래스</span>/<span class="red">메소드</span>/<span class="blue">파라미터1</span>/<span class="orange">파리미터2</span>
+            </div>
+        </div>
+
+
+        <div class="form mb20">
+
+            <h2><i class="fa fa-cube" aria-hidden="true"></i> DB 테이블</h2>
+
+            {@ data.tables}
+
+
+            {? .key_==0}
+            <h3 class="size12 pb10">{.value_[0][0]} : {.value_[0][1]}</h3>
+            {:}
+            <h3 class="size12 pb10 pt20">{.value_[0][0]} : {.value_[0][1]}</h3>
+            {/}
+
+
+            <div class="over_table">
+                <table>
+                    <colgroup>
+                        <col width="70px">
+                        <col width="142px">
+                        <col width="120px">
+                        <col width="120px">
+        				<col>
+        			</colgroup>
+                    <tr>
+        				<th class="center">번호</th>
+                        <th class="center">컬럼</th>
+                        <th class="center">컬럼명</th>
+                        <th class="center">타입</th>
+                        <th class="center">비고</th>
+        			</tr>
+                    {@ .value_}
+                    {? ..key_!=0}
+                    <tr>
+        				<td class="center">{..key_}</td>
+                        <td class="center">{..value_[0]}</td>
+                        <td class="center">{..value_[1]}</td>
+                        <td class="center">{..value_[2]}</td>
+                        <td >{..value_[3]}</td>
+        			</tr>
+                    {/}
+                    {/}
+                </table>
+            </div>
+
+
+             {/}
+
+        </div>
+
+
+        <div class="form mb20">
+            <h2><i class="fa fa-cube" aria-hidden="true"></i> 코어 프로그램 커스터마이징(예제)</h2>
+            <img src="/data/skin/{cfg.skin}/devguide/dev_custom_1.jpg" alt="dev_custom_1">
+            <div class="pt10">
+                controller 내에 파일을 복사하여 custom 경로에 복사/붙여넣기 후 custom에 복사한 파일을 수정해 줍니다.
+            </div>
+        </div>
+
+
+
+        <div class="form">
+            <h2><i class="fa fa-cube" aria-hidden="true"></i> 프로그램(또는 클래스) 추가</h2>
+            <img src="/data/skin/{cfg.skin}/devguide/dev_custom_2.jpg" alt="dev_custom_2">
+            <div class="pt10 pb10">
+                1. custom 경로에 원하는 클래스명으로 파일을 추가 합니다. 파일명은 반드시 소문자로 합니다.
+            </div>
+            <pre class="brush:php;" name="code">
+                &lt;?
+                    namespace controller\admin;
+                    use common;
+                    class Sample extends common\AdminLibrary{
+
+                        function __construct(){
+
+                            parent::__construct();
+
+                        }
+
+                        # your code ...
+                        function test(){
+
+                        }
+
+                    }
+            </pre>
+            <div>
+                2. 파일명과 동일한 이름으로 클래스를 만들어 줍니다. 클래스명 첫 글자는 반드시 대문자로 합니다.
+            </div>
+        </div>
+
+
+        <div class="form">
+            <h2><i class="fa fa-cube" aria-hidden="true"></i> 추가된 DB 테이블 선언</h2>
+            <pre class="brush:php;" name="code">
+                &lt;?
+                    $table['place'] ='w_place';
+            </pre>
+            <div>
+                새롭게 추가된 테이블은 <span class="green">custom/conf/tables.php</span> 파일에 추가 합니다.
+            </div>
+        </div>
+
+        <div class="form">
+            <h2><i class="fa fa-cube" aria-hidden="true"></i> DB 테이블 사용법</h2>
+            <pre class="brush:php;" name="code">
+                &lt;?
+                    namespace controller\admin;
+                    use common;
+                    class Sample extends common\AdminLibrary{
+
+                        function __construct(){
+
+                            parent::__construct();
+
+                        }
+
+                        # your code ...
+                        function test(){
+                            $query = "select * from ".$this->db->tables['place']." where 1";
+                        }
+
+                    }
+            </pre>
+            <div>
+                <span class="green">$this->db->tables['테이블명']</span>으로 불러와 사용할 수 있습니다.
+            </div>
+        </div>
+
+
+
+        <div class="form">
+            <h2><i class="fa fa-cube" aria-hidden="true"></i> 메뉴 추가하기</h2>
+            <pre class="brush:php;" name="code">
+                &lt;?
+                    $admin_menu[2][0] = array('디지털광고판','!');
+
+                    $admin_menu[2][1] = array('홍보터관리','/admin/adver/places');
+                    $admin_menu[2][2] = array('광고주관리','/admin/adver/orders');
+                    $admin_menu[2][3] = array('영업사원관리','/admin/adver/salesmans');
+            </pre>
+            <div>
+                새로운 메뉴는 <span class="green">custom/conf/menu.php</span> 파일에 추가 합니다.
+            </div>
+        </div>
+
+
+</div>
+
+
+
+{#footer}

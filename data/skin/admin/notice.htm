@@ -1,0 +1,60 @@
+{#header}
+
+<div id="notice" class="bg_white">
+    <nav><i class="fas fa-code-branch"></i> 설정 > 공지</nav>
+
+    <form method="post" enctype="multipart/form-data" action="/admin/notice/notice/{data.idx}" target="ifrmh">
+
+        <div class="form">
+            <h2><i class="fa fa-cube" aria-hidden="true"></i> 데이터</h2>
+            <table>
+                <colgroup>
+                    <col width="180px">
+    				<col>
+    			</colgroup>
+                <tr>
+    				<th>작성자</th>
+                    <td>
+                        {sess.name}
+                        <input type="hidden" name="member_idx" value="{sess.idx}">
+                    </td>
+    			</tr>
+                <tr>
+    				<th>제목</th>
+                    <td>
+                        <input type="text" name="subject" value="{data.subject}" size=80>
+                    </td>
+    			</tr>
+                <tr>
+    				<th>내용</th>
+                    <td>
+                        <textarea name="contents" rows=5>{data.contents}</textarea>
+                    </td>
+    			</tr>
+                <tr>
+    				<th>첨부파일</th>
+                    <td>
+                        {? data.file}
+                        <a href="/data/skin/{cfg.skin}/file/{data.file}" target="ifrmh" class="green">{data.file}</a>
+                        <label><input type="checkbox" class="checkbox" name="file_del" value="y"> 삭제</label>
+                        <input type="hidden" name="ori_file" value="{data.file}">
+                        <br/>
+                        {/}
+                        <input type="file" name="file" >
+                    </td>
+    			</tr>
+    		</table>
+        </div>
+
+        <div class="btn_area center">
+            <a href="{__SERVER['HTTP_REFERER']}" class="inline_block button white bg_black hover_white">취소</a>
+            <button type="submit" class="button white bg_black hover_white">저장</button>
+        </div>
+
+    </form>
+
+</div>
+
+
+
+{#footer}

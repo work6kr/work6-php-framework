@@ -1,0 +1,100 @@
+{#header}
+
+<div id="user" class="bg_white">
+    <nav><i class="fas fa-code-branch"></i> 직원 > 직원리스트</nav>
+
+    <form method="post" enctype="multipart/form-data" action="/admin/member/user/{data.idx}" target="ifrmh">
+
+        <div class="form">
+            <h2><i class="fa fa-cube" aria-hidden="true"></i> 데이터</h2>
+            <table>
+                <colgroup>
+                    <col width="180px">
+    				<col>
+    			</colgroup>
+                <tr>
+    				<th>이메일</th>
+                    <td>
+                        {? data.uid}
+                            {data.uid}
+                        {:}
+                            <input type="text" name="uid" >
+                        {/}
+                    </td>
+    			</tr>
+                <tr>
+    				<th>등급</th>
+                    <td>
+                        <select name="level">
+                            {@ data.level_list}
+                            <option value="{.level}" {? data.level==.level}selected{/}>{.name}</option>
+                            {/}
+                        </select>
+                        <div class="size10 green">등급 추가는 <a href="/admin/member/groups" class="blue">직원 > 직원등급</a> 메뉴에서 해주세요.</div>
+                    </td>
+    			</tr>
+                <tr>
+    				<th>소속</th>
+                    <td>
+                        <input type="text" name="team" value="{data.team}">
+                    </td>
+    			</tr>
+                <tr>
+    				<th>이름</th>
+                    <td>
+                        <input type="text" name="name" value="{data.name}">
+                    </td>
+    			</tr>
+                <tr>
+    				<th>연락처</th>
+                    <td>
+                        <input type="text" name="mobile" value="{data.mobile}">
+                    </td>
+    			</tr>
+                {? data.uid}
+                <tr>
+    				<th>패스워드</th>
+                    <td>
+                        <a class="inline_block button white bg_black hover_white btn_new_password" idx='{data.idx}'>패스워드 발급</a>
+                        <div class="size10 green">{data.uid}로 새로운 패스워드가 전송 됩니다.</div>
+                    </td>
+    			</tr>
+                {:}
+                <tr>
+    				<th>패스워드</th>
+                    <td>
+                        <input type="password" name="upw[]" placeholder="패스워드">
+                        <input type="password" name="upw[]" placeholder="패스워드 확인">
+                    </td>
+    			</tr>
+                {/}
+    		</table>
+        </div>
+
+        <div class="btn_area center">
+            <a href="{__SERVER['HTTP_REFERER']}" class="inline_block button white bg_black hover_white">취소</a>
+            <button type="submit" class="button white bg_black hover_white">저장</button>
+        </div>
+
+    </form>
+
+</div>
+
+
+<script>
+$(function(){
+    $('.btn_new_password').click(function(){
+
+        $.post('/admin/member/sendNewPassword',{ idx: $(this).attr('idx') } ,function(res){
+            if(res=='1'){
+                alert('패스워드가 전송되었습니다.');
+            }else{
+                alert('패스워드 전송이 실패하였습니다. 개발자에게 문의 바랍니다.');
+            }
+        });
+
+    });
+});
+</script>
+
+{#footer}

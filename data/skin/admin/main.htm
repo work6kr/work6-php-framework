@@ -1,0 +1,29 @@
+{#header}
+
+<div id="main" class="bg_gray">
+    <div class="bg_white radius10 inline_block">
+        <h2><i class="fas fa-exclamation-circle"></i> 공지</h2>
+        <ul class="history_list">
+            {@ data.notice}
+            <li class="pl10 pt10 pb20 relative">
+                <h3 class="size16">{.subject}</h3>
+                <div class="gray mt10 mb10"><span class="green">{.insdt}</span>, {.name}{? .file}, <a href="/data/skin/{cfg.skin}/file/{.file}" target="ifrmh" class="blue">첨부파일 다운로드</a>{/}</div>
+                <p class="gray">{.contents}</p>
+            </li>
+            {/}
+        </ul>
+    </div>
+    <div class="bg_white radius10 inline_block">
+        <h2><i class="fas fa-flag"></i> 최근접속</h2>
+        <ul class="history_list">
+            {@ data.log_login}
+            <li class="pl10 pt10 pb20 relative">
+                <div class="gray"><span class="green">{.logindt}</span><br/>{.member_name} ( {.ip} )</div>
+            </li>
+            {/}
+        </ul>
+    </div>
+
+</div>
+
+{#footer}

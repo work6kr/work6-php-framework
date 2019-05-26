@@ -1,0 +1,45 @@
+{#header}
+
+<div id="info" class="bg_white">
+    <nav><i class="fas fa-code-branch"></i> 도움말 > 프로그램 정보</nav>
+
+
+
+        <div class="form">
+            <h2><i class="fa fa-cube" aria-hidden="true"></i> {cfg.site_name} 프로그램</h2>
+            <table>
+                <colgroup>
+                    <col width="180px">
+    				<col>
+    			</colgroup>
+                <tr>
+    				<th>코어 프로그램 버전</th>
+                    <td>{data.core_version}</td>
+    			</tr>
+                <tr>
+    				<th>관리 프로그램 버전</th>
+                    <td>{data.solution_version}</td>
+    			</tr>
+                <tr>
+    				<th>개발회사</th>
+                    <td>{data.maker}</td>
+    			</tr>
+                <tr>
+    				<th>개발회사 홈페이지</th>
+                    <td><a href="{data.homepage}" target="_blnak" class="blue">{data.homepage}</a></td>
+    			</tr>
+    		</table>
+        </div>
+
+
+        <div class="form">
+            <h2><i class="fa fa-cube" aria-hidden="true"></i> 개발자 가이드</h2>
+            <a href="{data.dev_guide}" target="_blnak" class="blue">{data.dev_guide}</a>
+        </div>
+
+
+
+
+</div>
+
+{#footer}

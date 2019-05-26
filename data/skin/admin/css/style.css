@@ -1,0 +1,920 @@
+body,html{
+    height: 100%;
+    overflow-x: hidden;
+    background: #f0f0f0;
+}
+h1,h2,h3,h4{
+    font-size:16px;
+}
+
+
+
+
+/* font size */
+.size10,.size_samll{
+    font-size:10px;
+}
+.size12,.size_normal{
+    font-size:12px;
+}
+.size16,.size_large{
+    font-size:16px;
+}
+.size20,.size_big{
+    font-size:18px;
+}
+
+
+
+/* font color */
+.red{
+    color:#ff5722!important;
+}
+.gray{
+    color:#a0a0a0!important;
+}
+.orange{
+    color:#ff9800!important;
+}
+.pink{
+    color:#e91e63!important;
+}
+.green{
+    color:#009688!important;
+}
+.brown{
+    color:#795548!important;
+}
+.black{
+    color:#383d41!important;
+}
+.blue{
+    color:#2196f3!important;
+}
+.white{
+    color:#fff!important;
+}
+
+
+
+/* background color */
+.bg_black{
+    background:#202020!important;
+}
+.bg_gray{
+    background:##f0f0f0!important;
+}
+.bg_white{
+    background:#fff !important;
+}
+.bg_trans{
+    background:transparent!important;
+}
+.bg_red{
+    background:#f44336 !important;
+}
+.bg_yellow{
+    background:#ffeb3b !important;
+}
+.bg_green{
+    background:#4caf50 !important;
+}
+.bg_blue{
+    background:#00bcd4 !important;
+}
+
+
+/* hover style */
+.hover_black{
+    transition: all 0.2s;
+}
+.hover_black:hover{
+    color:#f9f9f9!important;
+    background:#202020!important;
+}
+.hover_gray{
+    transition: all 0.2s;
+}
+.hover_gray:hover{
+    color:#383d41!important;
+    background:#f0f0f0!important;
+}
+.hover_white{
+    transition: all 0.2s;
+}
+.hover_white:hover{
+    color:#383d41!important;
+    background:#fff!important;
+}
+.hover_green{
+    transition: all 0.2s;
+}
+.hover_green:hover{
+    color:#388e3c!important;
+    background:#e8f5e9!important;
+}
+.hover_red{
+    transition: all 0.2s;
+}
+.hover_red:hover{
+    color:#d32f2f!important;
+    background:#ffebee!important;
+}
+.hover_orange{
+    transition: all 0.2s;
+}
+.hover_orange:hover{
+    color:#f57c00!important;
+    background:#fff3e0!important;
+}
+
+
+
+
+/* border */
+.border{
+    border:1px solid #eee;
+}
+.radius{
+    border-radius: 5px !important;
+}
+.radius10{
+    border-radius: 10px !important;
+}
+
+
+
+
+
+/* align */
+.left{
+    text-align:left !important;
+}
+.center{
+    text-align:center !important;
+}
+.right{
+    text-align:right !important;
+}
+
+
+
+
+
+/* display */
+.inline_block{
+    display:inline-block!important;
+    vertical-align: top;
+}
+.inline{
+    display:inline!important;
+    vertical-align: top;
+}
+.block{
+    display:block!important;
+}
+
+
+
+
+/* position */
+.relative{
+    position: relative!important
+}
+.absolute{
+    position: absolute!important
+}
+.fixed{
+    position: fixed!important
+}
+
+
+
+
+
+/* margin */
+.mr10{
+    margin-right:10px!important
+}
+.mr20{
+    margin-right:20px!important
+}
+.ml10{
+    margin-left:10px!important
+}
+.ml20{
+    margin-left:20px!important
+}
+.mt10{
+    margin-top:10px!important
+}
+.mt20{
+    margin-top:20px!important
+}
+.mb10{
+    margin-bottom:10px!important
+}
+.mb20{
+    margin-bottom:20px!important
+}
+
+
+
+/* padding */
+.pr10{
+    padding-right:10px!important
+}
+.pr20{
+    padding-right:20px!important
+}
+.pl10{
+    padding-left:10px!important
+}
+.pl20{
+    padding-left:20px!important
+}
+.pt10{
+    padding-top:10px!important
+}
+.pt20{
+    padding-top:20px!important
+}
+.pb10{
+    padding-bottom:10px!important
+}
+.pb20{
+    padding-bottom:20px!important
+}
+
+
+/* beetween */
+.beetween{
+    line-height:35px;
+}
+
+
+
+/* pageaerea */
+ul.pageaerea li{
+    display: inline-block;
+    vertical-align: top;
+}
+ul.pageaerea li a{
+    display: inline-block;
+    width:30px;
+}
+ul.pageaerea li.active a{
+    font-weight:bold;
+}
+
+
+
+/* input */
+input[type="text"],input[type="password"]{
+    line-height: 30px;
+    height:32px;
+    border:1px solid #e1e1e1;
+    padding:0px 10px;
+    vertical-align: top;
+    margin:1px 0px;
+}
+input[type="submit"]{
+    line-height: 30px;
+    height:32px;
+    border:1px solid #e1e1e1;
+    padding:0px 10px;
+    vertical-align: top;
+    background: #fff;
+    margin:1px 0px;
+}
+input[type="file"]{
+    border: 1px solid #e1e1e1;
+    padding: 6px 10px;
+    vertical-align: top;
+    background: #fff;
+    margin: 1px 0px;
+}
+input[type="checkbox"]{
+    display:none;
+    vertical-align: bottom;
+}
+textarea{
+    border:1px solid #e1e1e1;
+    padding:10px;
+    vertical-align: top;
+    width:100%;
+    line-height: 18px;
+}
+button.button{
+    min-width: 80px;
+    line-height: 30px;
+    height:32px;
+    border:1px solid #e1e1e1;
+    padding:0px 10px;
+    vertical-align: top;
+    background: #fff;
+    margin:1px 0px;
+}
+a.button{
+    min-width: 80px;
+    line-height: 30px;
+    height:32px;
+    border:1px solid #e1e1e1;
+    padding:0px 10px;
+    vertical-align: top;
+    background: #fff;
+    margin:1px 0px;
+    cursor: pointer;
+}
+select{
+    height:32px;
+    line-height: 30px;
+}
+
+
+
+
+
+/* designSelect */
+.designSelect{
+    position:relative;
+    display:inline-block;
+    cursor:pointer;
+    border:1px solid #e2e2e4;
+    border-radius: 0px;
+    margin:1px 0px;
+}
+.designSelect .box{
+    text-align: left;
+}
+.designSelect .box::after{
+    font-family: 'Font Awesome 5 Free';
+    font-weight:900;
+    content:"\f107";
+    position:absolute;
+    right:10px;
+    font-size:14px;
+    top:1px;
+}
+.designSelect .option_container{
+    position:absolute;
+    display:none;
+    left:0px;
+    height:0;
+    border:1px solid #e2e2e4;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    background: #fff;
+    z-index: 10;
+}
+.designSelect .option_container .option{
+    background:#fff;
+    text-align: left;
+    color:#bdbdbd;
+}
+.designSelect .option_container .option:hover{
+    background:#f1f1f1;
+    color:#797979;
+}
+
+
+
+
+/* designToggle */
+.designToggle{
+    display:inline-block;
+    border:1px solid #e1e1e1;
+    width:60px;
+    height:30px;
+    border-radius: 15px;
+    background: #f0f0f0;
+    position: relative;
+    vertical-align: middle;
+    transition: all 0.2s;
+}
+.designToggle::after{
+    content: "";
+    width:28px;
+    height:28px;
+    border:1px solid #e1e1e1;
+    position: absolute;
+    left:0;
+    top:0;
+    border-radius: 50%;
+    background: #fff;
+    transition: all 0.2s;
+}
+input[type="checkbox"].toggle:checked + label.designToggle::after{
+    left:30px;
+}
+input[type="checkbox"].toggle:checked + label.designToggle{
+    background: #fff;
+}
+
+
+
+/* designCheckbox */
+.designCheckbox{
+    display:inline-block;
+    border:1px solid #e1e1e1;
+    width:12px;
+    height:12px;
+    vertical-align: middle;
+    margin-bottom:2px;
+    position: relative;
+    background: #fff;
+}
+.designCheckbox::after{
+
+}
+input[type="checkbox"].checkbox:checked + label.designCheckbox{
+
+}
+input[type="checkbox"].checkbox:checked + label.designCheckbox::after{
+    content: "\f00c";
+    font-family: 'Font Awesome 5 Free';
+    font-weight:900;
+    line-height: 11px;
+    position: absolute;
+    top:0px;
+    left:0;
+    font-size:10px;
+}
+
+
+
+/* datepicekr */
+.ui-datepicker-year{
+    width:auto !important;
+    height:auto;
+    margin: 0 !important;
+    line-height: 1.8em;
+    background: transparent;
+    border: 0;
+}
+.ui-datepicker-month{
+    width:auto !important;
+    height: auto;
+    margin: 0 !important;
+    margin-left:10px !important;
+    line-height: 1.8em;
+    background: transparent;
+    border: 0;
+}
+
+
+
+/* form */
+.form{
+    padding-bottom:30px;
+}
+.form > h2{
+    font-size:14px;
+    padding-bottom:10px;
+}
+.form > table{
+    border-collapse: collapse;
+    width:100%;
+}
+.form > table th{
+    border:1px solid #eee;
+    background: #f9f9f9;
+    padding:10px 20px;
+}
+.form > table td{
+    border:1px solid #eee;
+    padding:5px 10px;
+}
+
+
+.btn_area{
+    padding-bottom: 20px;
+}
+.btn_area button{
+    min-width: 80px;
+}
+.btn_area input[type="submit"]{
+    min-width: 80px;
+}
+.btn_area a{
+    min-width: 80px;
+}
+
+
+.list table{
+    border-collapse: collapse;
+    width:100%;
+}
+.list th{
+    border-top:1px solid #eee;
+    border-bottom:1px solid #eee;
+    padding:8px 0px;
+    background:#f1f1f1;
+    text-align: center;
+}
+.list tr:nth-child(odd){
+    background:#f9f9f9;
+}
+.list td{
+    border-bottom:1px solid #eee;
+    padding:8px 0px;
+    text-align:center;
+}
+.list td input[type="checkbox"]{
+    display: inline-block;
+    vertical-align: middle;
+}
+.list td img{
+    max-width:100%;
+}
+
+
+.searcharea table{
+    width:100%;
+}
+.searcharea table td:nth-child(2){
+    text-align:right;
+}
+.searcharea [name="stxt"]{
+    max-width:150px;
+}
+
+
+
+/* over_table */
+.over_table{
+    overflow-x: auto;
+}
+.over_table table{
+    min-width:768px;
+    width:100%;
+}
+
+
+#admin_body{
+    width:100%;
+    min-height:100%;
+    left:0;
+}
+
+#admin_body > .menu{
+    position: absolute;
+    top:0;
+    left:0;
+    background: #202020;
+    color: #9f9f9f;
+    width: 230px;
+    min-height: 100%;
+    text-align: left;
+}
+#admin_body > .menu a{
+    color:#9f9f9f;
+}
+#admin_body > .menu a:hover{
+    color:#fff;
+}
+#admin_body > .menu a i{
+    margin: 0px 10px;
+    margin-left: 5px;
+}
+#admin_body > .menu li{
+    padding:0px 20px;
+    padding-left:35px;
+}
+#admin_body > .menu li a{
+    padding:10px 0px;
+}
+#admin_body > .menu li.title{
+    padding:10px 20px;
+    padding-left:20px;
+}
+#admin_body > .menu li.title i{
+    width:12px;
+    text-align: center;
+}
+#admin_body > .menu .admin_name{
+    padding:20px;
+}
+#admin_body > .menu #copyright{
+    padding:30px 20px;
+}
+#admin_body > .body{
+    display: inline-block;
+    width:calc(100% - 230px);
+    vertical-align: top;
+    margin-left:230px;
+}
+#admin_body > .body > #body_header{
+    margin:0;
+    border-radius: 0;
+}
+#admin_body > .body > #body_header .profile{
+    top:18px;
+    right:0px;
+    cursor: pointer;
+}
+#admin_body > .body > #body_header .profile .photo{
+    width:32px;
+    height:32px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+#admin_body > .body > #body_header .profile .photo img{
+    width:100%;
+}
+#admin_body > .body > #body_header .profile span{
+    line-height: 32px;
+    margin-left: 10px;
+}
+#admin_body > .body > #body_header .profile ul{
+    overflow: hidden;
+    border-bottom:0;
+    right:-150px;
+    transition: all 0.6s;
+}
+#admin_body > .body > #body_header .profile ul.on{
+    right:0;
+    z-index: 100;
+}
+#admin_body > .body > #body_header .profile ul li a{
+    padding:10px;
+    border-bottom: 1px solid #eee;
+}
+#admin_body > .body > #body_header .profile ul li i{
+    width:20px;
+}
+#admin_body > .body > div{
+    border-radius:10px;
+    padding:20px;
+    margin:20px;
+}
+#admin_body > .body nav{
+    padding-bottom: 30px;
+}
+#admin_body.full > .body{
+    display:inline-block;
+    float:left;
+    width:100%;
+    height:100%;
+    background:#f0f0f0;
+    text-align: left;
+    padding:0px;
+    vertical-align: top;
+    margin-left:0 !important;
+}
+
+
+
+#admin_body.menu_close{
+    left:-230px;
+    width: calc(100% + 230px);
+}
+
+
+
+
+#login{
+    position: fixed;
+    width:360px;
+    height:300px;
+    left:50%;
+    margin-left:-180px !important;
+    margin-top:40px !important;
+}
+#login h1{
+    padding-bottom: 10px;
+}
+#login dl{
+    display:table;
+}
+#login dd{
+    display:table-cell;
+    vertical-align: top;
+}
+#login dd input[type=text],#login dd input[type=password]{
+    width:100%;
+}
+#login dd input[type=submit]{
+    width:100%;
+    margin-top:30px;
+}
+#login span{
+    top:46px;
+    letter-spacing: 1px;
+}
+
+
+
+/* install */
+#install{
+    position: fixed;
+    width:360px;
+    left:50%;
+    margin-left:-180px !important;
+}
+#install dl{
+    display:table;
+}
+#install dd{
+    display:table-cell;
+    vertical-align: top;
+}
+#install dd input[type=text],
+#install dd input[type=password]{
+    width:100%;
+}
+#install dd input[type=submit]{
+    width:100%;
+    margin-top:30px;
+}
+#install span{
+    top:46px;
+    letter-spacing: 1px;
+}
+
+
+
+/* main */
+#main{
+    padding:0 !important;
+    margin:0 !important;
+    padding-bottom: 20px !important;
+}
+#main > div{
+    padding:20px;
+    margin:20px 0px 0px 20px;
+    width:calc(33.3% - 30px);
+}
+#main ul.history_list{
+    margin-left:7px;
+}
+#main ul.history_list li{
+    border-left:2px solid #eee;
+    border-bottom:1px dashed #eee;
+}
+#main ul.history_list li::before{
+    content: "";
+    position: absolute;
+    width:12px;
+    height:12px;
+    left:-7px;
+    top:16px;
+    background: #eee;
+    border-radius: 50%;
+}
+
+
+/* profile */
+#profile .form_password_change{
+    width:0;
+    height:34px;
+    overflow-y: hidden;
+    transition: all 0.6s;
+}
+#profile .form_password_change.on{
+    width:320px;
+}
+
+
+
+/* group */
+#group td i{
+    width:12px;
+    text-align: center;
+}
+
+
+
+
+/* devguide */
+#devguide img{
+    max-width: 100%;
+}
+#devguide .form{
+    padding-bottom:30px;
+}
+#devguide .form h2{
+    font-size:14px;
+    padding-bottom:10px;
+}
+#devguide .form table th{
+    border:1px solid #eee;
+    background: #f9f9f9;
+    padding:10px 20px;
+}
+#devguide .form table td{
+    border:1px solid #eee;
+    padding:5px 10px;
+}
+
+
+
+/* popup_base */
+#popup_base{
+    display:none;
+    position:fixed;
+    width:70%;
+    height:80%;
+    background:#fff;
+    border-radius:4px;
+}
+
+
+
+/* ipad */
+@media (max-width:768px){
+
+	input[type="text"], input[type="password"],input[type="file"]{
+        width:100%;
+    }
+
+
+    #admin_body{
+        width: calc(100% + 230px);
+        left: -230px;
+        transition: all 0.6s;
+    }
+
+    #admin_body.menu_close{
+        left: 0px;
+    }
+
+
+
+    #profile .form_password_change input{
+        width:150px !important;
+    }
+
+    #main > div{
+        width:calc(50% - 32px);
+    }
+
+
+
+
+}
+
+
+
+@media (max-width:414px){
+
+    .form > table{
+        border-bottom: 1px solid #eee;
+    }
+
+    .form > table th{
+        display: block;
+        border-bottom: 0;
+        padding:10px !important;
+    }
+
+    .form > table td{
+        display: block;
+        border-bottom: 0;
+    }
+
+
+
+    /* searcharea */
+    .searcharea table td{
+        display: block;
+    }
+
+
+    #login{
+        width:calc(100% - 40px);
+        left:20px;
+        margin-left:0 !important;
+    }
+
+    #login span {
+        top: 15px;
+    }
+
+
+    #profile .form_password_change{
+        display: block !important;
+        width:100%;
+        height:0;
+        transition-delay: 0.6s;
+        transition: all 0.6s;
+    }
+    #profile .form_password_change input{
+        width:100% !important;
+    }
+    #profile .form_password_change.on{
+        display: block !important;;
+        width:100%;
+        height:68px;
+    }
+
+
+    #main > div{
+        width:calc(100% - 40px);
+    }
+
+
+
+
+
+}

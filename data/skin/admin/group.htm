@@ -1,0 +1,60 @@
+{#header}
+
+<div id="group" class="bg_white">
+    <nav><i class="fas fa-code-branch"></i> 직원 > 직원등급</nav>
+
+    <form method="post" enctype="multipart/form-data" action="/admin/member/group/{this->lib->segment[5]}" target="ifrmh">
+
+        <div class="form">
+            <h2><i class="fa fa-cube" aria-hidden="true"></i> 데이터</h2>
+            <table>
+                <colgroup>
+                    <col width="180px">
+    				<col>
+    			</colgroup>
+                <tr>
+    				<th>등급명</th>
+                    <td><input type="text" name="name" value="{data.name}"></td>
+    			</tr>
+                <tr>
+    				<th>등급</th>
+                    <td>
+                        <input type="text" name="level" value="{data.level}">
+                        <div class="size10 green">9998 이하 숫자를 입력합니다.</div>
+                    </td>
+    			</tr>
+                <tr>
+    				<th>관리자 접근 여부</th>
+                    <td>
+                        <input type="checkbox" name="admin_permision" value="y" class="toggle" {data.checked.admin_permision.y}>
+                    </td>
+    			</tr>
+                <tr>
+    				<th>관리자 메뉴 접근 허용</th>
+                    <td>
+                        {@ data.admin_menu}
+                        <div class="pt10 pb10">
+                            <div class="pb10">{.value_[0][1]} {.value_[0][0]}</div>
+                            {@ .value_}
+                            {? ..key_!=0}
+                            <label class="inline_block ml10"><input type="checkbox" class="checkbox" name="admin_menu_permit[]" value="{..value_[1]}" {..value_[2]}/> {..value_[0]}</label>
+                            {/}
+                            {/}
+                        </div>
+                        {/}
+                    </td>
+    			</tr>
+
+    		</table>
+        </div>
+
+        <div class="btn_area center">
+            <a href="{__SERVER['HTTP_REFERER']}" class="inline_block button white bg_black hover_white">취소</a>
+            <button type="submit" class="button white bg_black hover_white">저장</button>
+        </div>
+
+    </form>
+
+</div>
+
+{#footer}
