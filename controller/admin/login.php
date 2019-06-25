@@ -2,6 +2,7 @@
 namespace controller\admin;
 use common;
 use model\admin\Login as LoginModel;
+use common\Security as Security;
 class Login extends common\Template{
 
     function __construct(){
@@ -15,6 +16,7 @@ class Login extends common\Template{
         $this->segment = $segment;
 
         $this->model = new LoginModel;
+        $this->security = new Security;
 
 
 
@@ -55,6 +57,8 @@ class Login extends common\Template{
 
     #로그인 검증
     function chk(){
+
+        $this->security->csrf();
 
         if($this->lib->sess['level']>=9000){
             $this->lib->alert('로그인 중 입니다.');
