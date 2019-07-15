@@ -48,7 +48,7 @@
                                 <h2 class="pb10"><i class="fa fa-cube" aria-hidden="true"></i> 데이터베이스</h2>
                 				<input type="text" name="db_host" value="localhost" required="required" placeholder="호스트">
                 				<input type="text" name="db_name" value="" placeholder="데이터베이스명" required="required">
-                				<input type="text" name="db_id" value="" placeholder="아아디" required="required">
+                				<input type="text" name="db_id" value="" placeholder="아이디" required="required">
                 				<input type="password" name="db_pw" value="" placeholder="패스워드" required="required">
                             </div>
 
