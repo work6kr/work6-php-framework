@@ -65,8 +65,16 @@ class Page{
 
 		unset($getdata['page']);
 
-		foreach($getdata as $k=>$v){
-			if($v!='') $get .= '&'.$k.'='.$v;
+        foreach($getdata as $k=>$v){
+			if($v!=''){
+                if(is_array($v)){
+                    foreach($v as $v2){
+                        $get .= '&'.$k.'[]='.$v2;
+                    }
+                }else{
+                    $get .= '&'.$k.'='.$v;
+                }
+            }
 		}
 
 
@@ -109,8 +117,16 @@ class Page{
 
 		unset($getdata['page']);
 
-		foreach($getdata as $k=>$v){
-			if($v!='') $get .= '&'.$k.'='.$v;
+        foreach($getdata as $k=>$v){
+			if($v!=''){
+                if(is_array($v)){
+                    foreach($v as $v2){
+                        $get .= '&'.$k.'[]='.$v2;
+                    }
+                }else{
+                    $get .= '&'.$k.'='.$v;
+                }
+            }
 		}
 
 
