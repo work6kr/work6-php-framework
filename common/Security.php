@@ -46,9 +46,11 @@ class Security{
 
         $parse = parse_url($_SERVER['HTTP_REFERER']);
         if($parse['host']!=$_SERVER['HOST']){
-            $this->lib->alert('잘못된 접근 입니다.');
-            echo "<script>history.go(-1);</script>";
-            exit;
+            if($parse['host']!=$_SERVER['HTTP_HOST']){
+                $this->lib->alert('잘못된 접근 입니다.');
+                echo "<script>history.go(-1);</script>";
+                exit;
+            }
         }
 
     }
